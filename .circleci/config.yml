@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/isbn_validator
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      # Bundle install dependencies
+      - run: bundle install --path vendor/bundle
